@@ -12,7 +12,7 @@ const Trucks = () => {
   const [searchStr, setSearchStr] = useState('');
   const [fetchTrucksCount, setFetchTrucksCount] = useState(20);
 
-  // using fetch truck count as an alternative to a skip attribute, cuz there is no such an attribute
+  // using fetch truck count as an alternative to a skip attribute, cuz there is no such an attribute in api
   const { data: trucks = [], isLoading } = useGetTrucksQuery(fetchTrucksCount, {
     refetchOnMountOrArgChange: true,
     skip: false

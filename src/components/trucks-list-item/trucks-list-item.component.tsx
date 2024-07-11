@@ -1,6 +1,6 @@
-import { forwardRef } from 'react';
+import { forwardRef, memo } from 'react';
 import { TrucksListItemContainer } from './trucks-list-item.styles';
-import FoodTrackImg from '@/assets/img.png';
+import FoodTrackImg from '@/assets/food-truck.png';
 
 type TrucksListItemProps = {
   applicant: string;
@@ -8,7 +8,7 @@ type TrucksListItemProps = {
   id: string;
 };
 
-const TrucksListItem = forwardRef<HTMLAnchorElement, TrucksListItemProps>(({
+const TrucksListItem = memo(forwardRef<HTMLAnchorElement, TrucksListItemProps>(({
   id,
   applicant,
   address
@@ -22,6 +22,6 @@ const TrucksListItem = forwardRef<HTMLAnchorElement, TrucksListItemProps>(({
 
     <p>{address}</p>
   </TrucksListItemContainer>
-));
+)));
 
 export default TrucksListItem;

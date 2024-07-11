@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetTruckQuery } from '@/services/trucks/trucks.service';
 
@@ -8,7 +7,7 @@ import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { Loader } from '@/components';
 import { ErrorMessage, TruckContainer } from './truck.styles';
 
-const Truck = memo(() => {
+const Truck = () => {
 
   const { id } = useParams();
   const { data = [], isLoading, isError, error } = useGetTruckQuery(+id!);
@@ -49,6 +48,6 @@ const Truck = memo(() => {
 
     </TruckContainer>
   );
-});
+};
 
 export default Truck;

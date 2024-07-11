@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import Logo from '@/assets/logo.svg?react';
 import { LogoContainer, NavigationContainer, NavLink, NavLinks }
-  from './navigation.styles.tsx';
+  from './navigation.styles';
 
 const Navigation = () => (
   <>
     <NavigationContainer>
       <LogoContainer to='/'>
-        Logo
+        <Logo />
       </LogoContainer>
 
       <NavLinks>

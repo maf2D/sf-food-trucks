@@ -1,4 +1,4 @@
-import { LoaderContainer, LoaderOverlay } from './loader.styles.tsx';
+import { LoaderContainer, LoaderOverlay } from './loader.styles';
 
 const Loader = () => (
   <LoaderOverlay>
